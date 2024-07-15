@@ -6,6 +6,7 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -31,7 +32,7 @@ public class ClientPlayerInteractionManagerMixin {
             if (player.clientWorld.getBlockState(blockPos2).getFluidState().getFluid() == Fluids.LAVA) {
                 cir.setReturnValue(TypedActionResult.fail(itemStack).getResult());
                 cir.cancel();
-                player.sendMessage(Text.of("Restrict Placement of Lava in Lava"), true);
+                player.addChatMessage(new LiteralText("Restrict Placement of Lava in Lava"), true);
             }
         }
     }
