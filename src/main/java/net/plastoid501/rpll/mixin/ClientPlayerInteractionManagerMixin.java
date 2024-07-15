@@ -27,7 +27,7 @@ public class ClientPlayerInteractionManagerMixin {
         BlockPos blockPos2 = blockPos.offset(direction);
 
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.isOf(Items.LAVA_BUCKET)) {
+        if (itemStack.getItem() == Items.LAVA_BUCKET) {
             if (player.clientWorld.getBlockState(blockPos2).getFluidState().getFluid() == Fluids.LAVA) {
                 cir.setReturnValue(TypedActionResult.fail(itemStack).getResult());
                 cir.cancel();

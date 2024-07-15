@@ -2,14 +2,14 @@ package net.plastoid501.rpll;
 
 import net.fabricmc.api.ModInitializer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class RestrictPlacementOfLavaInLava implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("restrict-placement-of-lava-in-lava");
+	public static final Logger LOGGER = LogManager.getLogger("restrict-placement-of-lava-in-lava");
 
 	@Override
 	public void onInitialize() {
