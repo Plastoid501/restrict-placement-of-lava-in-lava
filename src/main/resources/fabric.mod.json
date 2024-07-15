@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "restrict-placement-of-lava-in-lava",
+	"version": "${version}",
+	"name": "Restrict Placement of Lava in Lava",
+	"description": "Disables the use of lava buckets for lava sources",
+	"authors": [
+		"Plastoid501"
+	],
+	"contact": {
+		"homepage": "https://github.com/Plastoid501/",
+		"sources": "https://github.com/Plastoid501/restrict-placement-of-lava-in-lava"
+	},
+	"license": "MIT",
+	"icon": "assets/restrict-placement-of-lava-in-lava/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.plastoid501.rpll.RestrictPlacementOfLavaInLava"
+		]
+	},
+	"mixins": [
+		"restrict-placement-of-lava-in-lava.mixins.json"
+	],
+	"depends": {
+		"minecraft": ">=1.20 <=1.20.4"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
