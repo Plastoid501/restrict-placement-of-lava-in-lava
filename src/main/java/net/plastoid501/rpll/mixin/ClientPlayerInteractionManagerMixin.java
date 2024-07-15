@@ -30,7 +30,7 @@ public class ClientPlayerInteractionManagerMixin {
         ItemStack itemStack = player.getStackInHand(hand);
         if (itemStack.getItem() == Items.LAVA_BUCKET) {
             if (player.clientWorld.getBlockState(blockPos2).getFluidState().getFluid() == Fluids.LAVA) {
-                cir.setReturnValue(TypedActionResult.fail(itemStack).getResult());
+                cir.setReturnValue(ActionResult.FAIL);
                 cir.cancel();
                 player.addChatMessage(new LiteralText("Restrict Placement of Lava in Lava"), true);
             }
