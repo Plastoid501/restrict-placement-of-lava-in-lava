@@ -23,7 +23,7 @@
 		"restrict-placement-of-lava-in-lava.mixins.json"
 	],
 	"depends": {
-		"minecraft": ">=1.21"
+		"minecraft": "1.19.x"
 	},
 	"suggests": {
 		"another-mod": "*"
